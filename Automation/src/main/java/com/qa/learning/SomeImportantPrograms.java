@@ -60,8 +60,11 @@ public class SomeImportantPrograms {
 		  b= a-b; //35-23 b = 12
 		  a=a-b;  //35-12 a = 23
 		  
-		  System.out.println("after swaping a,b the values of a is-->"+a +"and valueof b i--->"+b);
-		
+		  System.out.println("after swaping a,b the values of a is-->"+a +"and valueof b i--->"+b);		
 	}
+	 
+	/**
+	 * anagram 
+	 */
 	
 }
