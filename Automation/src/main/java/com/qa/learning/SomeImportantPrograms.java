@@ -1,5 +1,10 @@
 package com.qa.learning;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 public class SomeImportantPrograms {
 
 	/**
@@ -43,7 +48,7 @@ public class SomeImportantPrograms {
 //		if (sum == temp) {
 //			System.out.println("paimdrome");
 //		} else {
-//			System.out.println("Nit palindrome");
+//			System.out.println("Not palindrome");
 //		}
 //
 //	}
@@ -63,8 +68,67 @@ public class SomeImportantPrograms {
 		  System.out.println("after swaping a,b the values of a is-->"+a +"and valueof b i--->"+b);		
 	}
 	 
-	/**
-	 * anagram 
-	 */
 	
 }
+
+/**
+ * given string is anagram or not  
+ */
+
+class Anagram{
+	
+	public static boolean isAnagram(String str ,String str2) {
+		char[] Char = str.toCharArray();
+		StringBuilder sb = new StringBuilder(str2);
+		for(Character Ch :Char) {
+			int index = sb.indexOf(""+Ch);
+			System.out.println(index);
+			if(index!=-1) {
+				sb.deleteCharAt(index);
+			}	
+		}
+		if (sb.length()==0) {
+			return true;
+		}else {
+			return false;
+		}
+
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(isAnagram("my name is piyush", "piyush is my name"));
+	}
+}
+
+/**
+ * @author piyush.garg
+ * find a palindrome inside a string
+ */
+
+
+class PalindromeInsideAPalindrome{
+	
+	public static boolean checkPalindrome(String str) {
+		for(int i =0;i<str.length()/2;i++) 
+		if(str.charAt(i)!= str.charAt(str.length()-1-i))
+		return false;
+		return true;
+	}
+	
+	public static Set printAllPalindrome(String str) {
+		Set<CharSequence> set = new HashSet<>();
+		for(int i=0;i<str.length();i++) {
+			for(int j=i+1;j<str.length();j++) {
+				if(checkPalindrome(str.substring(i, j)))
+						set.add(str.substring(i, j));
+				
+			}
+		}
+		return set;
+	}
+	public static void main(String[] args) {
+		System.out.println(printAllPalindrome("abaabcaab"));
+	}
+}
+
+
