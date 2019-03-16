@@ -7,7 +7,7 @@ import java.util.Set;
 public class CountOfDuplicateCharacter {
 
 	public static void main(String[] args) {
-		System.out.println(occurenceOfDuplicateCharacter("acdbbaec"));
+		System.out.println(occurenceOfDuplicateCharacter("acdbbaecm"));
 	}
 	
 	public static Map<Character, Integer> occurenceOfDuplicateCharacter(String input) {

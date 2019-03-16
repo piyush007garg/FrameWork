@@ -11,7 +11,7 @@ public class CheckCountOfUniqueEmail {
 	}
 	
 	public static int checkUniqueEmail(String[] emails) {
-		Set<String> set = new HashSet<>();
+		Set<String> set = new HashSet();
 		for(String email:emails) {
 			String[] sepreateByAtTheRete = email.split("@");
 			String[] secondSplit = sepreateByAtTheRete[0].replace(".", "").split("[+]");

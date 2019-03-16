@@ -1,8 +1,6 @@
-package com.qa.learning;
+	package com.qa.learning;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class SomeImportantPrograms {
@@ -59,7 +57,8 @@ public class SomeImportantPrograms {
 	 */
 	
 	 public static void main(String[] args) {
-		 int a=12 , b=23;
+		 int a=12;
+		 int b=23;
 		 
 		  a= a+b; // a=35
 		  b= a-b; //35-23 b = 12
@@ -78,9 +77,9 @@ public class SomeImportantPrograms {
 class Anagram{
 	
 	public static boolean isAnagram(String str ,String str2) {
-		char[] Char = str.toCharArray();
+		char[] Chararacter = str.toCharArray();
 		StringBuilder sb = new StringBuilder(str2);
-		for(Character Ch :Char) {
+		for(Character Ch :Chararacter) {
 			int index = sb.indexOf(""+Ch);
 			System.out.println(index);
 			if(index!=-1) {
@@ -109,14 +108,16 @@ class Anagram{
 class PalindromeInsideAPalindrome{
 	
 	public static boolean checkPalindrome(String str) {
-		for(int i =0;i<str.length()/2;i++) 
-		if(str.charAt(i)!= str.charAt(str.length()-1-i))
+		for(int i =0;i<str.length()/2;i++) {
+		if(str.charAt(i)!= str.charAt(str.length()-1-i))	{
 		return false;
+		}
+		}
 		return true;
 	}
 	
-	public static Set printAllPalindrome(String str) {
-		Set<CharSequence> set = new HashSet<>();
+	public static Set<CharSequence> printAllPalindrome(String str) {
+		Set<CharSequence> set = new HashSet();
 		for(int i=0;i<str.length();i++) {
 			for(int j=i+1;j<str.length();j++) {
 				if(checkPalindrome(str.substring(i, j)))

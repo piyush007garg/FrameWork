@@ -39,7 +39,7 @@ public class CommonMethods {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(findDuplicateCharacterInsideAString("aaabbdeefg"));
+		System.out.println(findDuplicateCharacterInsideAString("aaabadeefg"));
 	}
 
 }
